@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Preview Likes",
+  "version": "1.0",
+  "description": "Shows likes under YouTube thumbnails without having to click on the video",
+  "icons": {
+    "16": "icons/logo-16.png",
+    "48": "icons/logo-48.png",
+    "128": "icons/logo-128.png"
+  },
+  "content_scripts": [{
+    "matches": ["*://*.youtube.com/*"],
+    "js": ["content.js"],
+    "run_at": "document_end"
+  }],
+  "host_permissions": ["*://*.youtube.com/*"]
+}
